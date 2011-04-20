@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{google-ime-skk}
-  s.version = "1.0.0"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hitode909"]
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin/google-ime-skk",
+    "google-ime-skk.gemspec",
     "lib/google-ime-skk.rb",
     "lib/google-ime-skk/cli.rb",
     "lib/socialskk.rb",
