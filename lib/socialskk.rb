@@ -49,6 +49,7 @@ class SocialSKK
             begin
               if kanji = search(kana)
                 ret.concat(SERVER_FOUND)
+                ret.concat('/')
                 ret.concat(kanji)
               else
                 ret.concat(SERVER_NOT_FOUND)
