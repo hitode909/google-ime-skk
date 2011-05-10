@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{google-ime-skk}
-  s.version = "1.1.0"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hitode909"]
-  s.date = %q{2011-04-20}
+  s.date = %q{2011-05-11}
   s.default_executable = %q{google-ime-skk}
   s.description = %q{SKK Server which uses Google CGI API for Japanese Input}
   s.email = %q{hitode909@gmail.com}
