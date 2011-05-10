@@ -17,7 +17,7 @@ class GoogleImeSkk < SocialSKK
 
   def encode_to_eucjp(text)
     if String.new.respond_to?(:encode)
-      text.encode('euc-jp', 'utf-8')
+      text.encode('euc-jp', 'utf-8', {:invaild => true, :replace => '?'})
     else
       require 'kconv'
       Kconv.toeuc(text)
@@ -30,10 +30,19 @@ class GoogleImeSkk < SocialSKK
     uri = URI.parse 'http://www.google.com/transliterate'
     http = Net::HTTP.new(uri.host, uri.port)
     http = Net::HTTP.new(uri.host, uri.port, @proxy.host, @proxy.port) if @proxy
-    http.start do |h|
-      res = h.get("/transliterate?langpair=ja-Hira%7Cja&text=" + URI.escape(text))
-      obj = JSON.parse(res.body.to_s)
-      encode_to_eucjp(obj[0][1].join('/'))
+    begin
+      http.read_timeout = 1
+      http.open_timeout = 1
+      http.start do |h|
+        res = h.get("/transliterate?langpair=ja-Hira%7Cja&text=" + URI.escape(text))
+        obj = JSON.parse(res.body.to_s)
+        encode_to_eucjp(obj[0][1].join('/'))
+      end
+    rescue => e
+      p e
+      return ""
     end
   end
 end
+
+
