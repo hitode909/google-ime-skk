@@ -39,7 +39,7 @@ class GoogleImeSkk < SocialSKK
         encode_to_eucjp(obj[0][1].join('/'))
       end
     rescue => e
-      p e
+      warn e
       return ""
     end
   end
