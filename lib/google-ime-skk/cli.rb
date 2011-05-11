@@ -42,7 +42,7 @@ module GoogleImeSkk::CLI
           opts.proxy = URI.parse(proxy)
         end
         on('-c', '--cache-time 1h', 'Cache keep time') do |ct|
-          opts.cache_time = time_parse(ct)
+          opts.cache_time = GoogleImeSkk::CLI.time_parse(ct)
         end
 
         parse!(ARGV)
