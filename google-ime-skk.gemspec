@@ -4,15 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{google-ime-skk}
-  s.version = "1.2.1"
+  s.name = "google-ime-skk"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hitode909"]
-  s.date = %q{2011-05-11}
-  s.default_executable = %q{google-ime-skk}
-  s.description = %q{SKK Server which uses Google CGI API for Japanese Input}
-  s.email = %q{hitode909@gmail.com}
+  s.date = "2014-01-27"
+  s.description = "SKK Server which uses Google CGI API for Japanese Input"
+  s.email = "hitode909@gmail.com"
   s.executables = ["google-ime-skk"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -35,11 +34,11 @@ Gem::Specification.new do |s|
     "spec/google-ime-skk_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/hitode909/google-ime-skk}
+  s.homepage = "http://github.com/hitode909/google-ime-skk"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
-  s.summary = %q{Google IME SKK Server}
+  s.rubygems_version = "1.8.23"
+  s.summary = "Google IME SKK Server"
   s.test_files = [
     "spec/google-ime-skk_spec.rb",
     "spec/spec_helper.rb"
