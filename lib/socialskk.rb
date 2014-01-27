@@ -95,6 +95,7 @@ class SocialSKK
           :kanji => kanji,
           :ctime => Time.now
         }
+      end
       kanji
     end
   end
