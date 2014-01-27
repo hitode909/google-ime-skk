@@ -40,7 +40,7 @@ class GoogleImeSkk < SocialSKK
       end
     rescue => e
       warn e
-      return ""
+      return nil
     end
   end
 end

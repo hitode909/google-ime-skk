@@ -90,10 +90,11 @@ class SocialSKK
       @cache[kana][:kanji]
     else
       kanji = social_ime_search(kana)
-      @cache[kana] = {
-        :kanji => kanji,
-        :ctime => Time.now
-      }
+      unless kanji.nil?
+        @cache[kana] = {
+          :kanji => kanji,
+          :ctime => Time.now
+        }
       kanji
     end
   end
